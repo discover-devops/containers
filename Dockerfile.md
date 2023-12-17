@@ -1,6 +1,4 @@
-Certainly! Here's a simplified version of your Docker image building guide in GitHub Markdown format:
 
-```markdown
 # How to Build Docker Image
 
 ## 1. Dockerfile Explained
