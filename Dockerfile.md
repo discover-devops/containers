@@ -26,19 +26,14 @@ The basic building block of a Docker image is a **Dockerfile**. It is a simple t
 
 ### 2.1. Step 1: Create the Required Files and Folders
 ```bash
-mkdir nginx-image && cd nginx-image
-mkdir files
+mkdir myproj
+cd myproj
 touch .dockerignore
 ```
 
 ### 2.2. Step 2: Create a Sample HTML File and Config File
 ```bash
-cd files
-vi index.html
-# Copy HTML content
-
-vi default
-# Copy config file content
+We will add commands
 ```
 
 ### 2.3. Step 3: Choose a Base Image
@@ -47,13 +42,13 @@ Choose a base image using the `FROM` command in the Dockerfile. Example: `FROM u
 ### 2.4. Step 4: Create the Dockerfile
 Create a Dockerfile in the `nginx-image` folder. Example content:
 ```dockerfile
-FROM ubuntu:18.04
-LABEL maintainer="contact@devopscube.com"
-RUN apt-get -y update && apt-get -y install nginx
-COPY files/default /etc/nginx/sites-available/default
-COPY files/index.html /usr/share/nginx/html/index.html
-EXPOSE 80
-CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+FROM 
+LABEL 
+RUN 
+COPY 
+COPY 
+EXPOSE 
+CMD 
 ```
 
 ### 2.5. Step 5: Build Your First Docker Image
@@ -72,29 +67,5 @@ docker run -d -p 9090:80 --name webserver nginx:1.0
 3. Tag the image with Docker Hub username: `docker tag nginx:1.0 <username>/nginx:1.0`
 4. Push the image to Docker Hub: `docker push <username>/nginx:1.0`
 
-## 4. Using Heredoc With Dockerfile
-...
 
-## 5. Dockerfile Best Practices
-...
 
-## 6. Possible Docker Build Issues
-...
-
-## 7. Docker Image Registries
-...
-
-## 8. Docker Image vs. Containers
-...
-
-## 9. Docker Image Build FAQs
-...
-
-## 10. What's Next
-...
-
-## 11. Conclusion
-...
-```
-
-Feel free to adjust the formatting and content to fit your needs.
